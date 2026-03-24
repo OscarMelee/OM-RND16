@@ -1,0 +1,47 @@
+name: Build VCV Rack Plugin
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+env:
+  RACK_SDK_VERSION: 2.6.6
+
+jobs:
+  build:
+    runs-on: windows-latest
+    defaults:
+      run:
+        shell: powershell
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup MSVC
+        uses: ilammy/msvc-dev-cmd@v1
+
+      - name: Download Rack SDK
+        run: |
+          Invoke-WebRequest -Uri "https://vcvrack.com/downloads/Rack-SDK-${{ env.RACK_SDK_VERSION }}-win-x64.zip" -OutFile "Rack-SDK.zip"
+          Expand-Archive -Path "Rack-SDK.zip" -DestinationPath "."
+
+      - name: Build plugin
+        run: |
+          $env:RACK_DIR = "$(Get-Location)\Rack-SDK"
+          New-Item -ItemType Directory -Force -Path build
+          cl /std:c++17 /O2 /EHsc /MD /D_USE_MATH_DEFINES /DNOMINMAX /I"$env:RACK_DIR\include" /I"$env:RACK_DIR\dep\include" /c src\plugin.cpp /Fo:build\plugin.obj
+          cl /std:c++17 /O2 /EHsc /MD /D_USE_MATH_DEFINES /DNOMINMAX /I"$env:RACK_DIR\include" /I"$env:RACK_DIR\dep\include" /c src\RND16.cpp /Fo:build\RND16.obj
+          link /DLL /OUT:plugin.dll build\plugin.obj build\RND16.obj /LIBPATH:"$env:RACK_DIR" libRack.lib
+
+      - name: Create artifact
+        run: |
+          New-Item -ItemType Directory -Force -Path dist\OM-RND16
+          Copy-Item plugin.dll dist\OM-RND16\
+          Copy-Item plugin.json dist\OM-RND16\
+          Copy-Item -Recurse res dist\OM-RND16\
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: OM-RND16-win-x64
+          path: dist/OM-RND16/
