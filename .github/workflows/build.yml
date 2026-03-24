@@ -1,1 +1,71 @@
-bmFtZTogQnVpbGQgVkNWIFJhY2sgUGx1Z2luCgpvbjoKICBwdXNoOgogICAgYnJhbmNoZXM6IFsgbWFpbiBdCiAgd29ya2Zsb3dfZGlzcGF0Y2g6CgplbnY6CiAgUkFDS19TREtfVkVSU0lPTjogMi42LjYKCmpvYnM6CiAgYnVpbGQ6CiAgICBydW5zLW9uOiB3aW5kb3dzLWxhdGVzdAogICAgZGVmYXVsdHM6CiAgICAgIHJ1bjoKICAgICAgICBzaGVsbDogcG93ZXJzaGVsbAogICAgc3RlcHM6CiAgICAgIC0gdXNlczogYWN0aW9ucy9jaGVja291dEB2NAoKICAgICAgLSBuYW1lOiBTZXR1cCBNU1ZDCiAgICAgICAgdXNlczogaWxhbW15L21zdmMtZGV2LWNtZEB2MQoKICAgICAgLSBuYW1lOiBEb3dubG9hZCBSYWNrIFNESwogICAgICAgIHJ1bjogfAogICAgICAgICAgSW52b2tlLVdlYlJlcXVlc3QgLVVyaSAiaHR0cHM6Ly92Y3ZyYWNrLmNvbS9kb3dubG9hZHMvUmFjay1TREstJHt7IGVudi5SQUNLX1NES19WRVJTSU9OIH19LXdpbi14NjQuemlwIiAtT3V0RmlsZSAiUmFjay1TREsuemlwIgogICAgICAgICAgRXhwYW5kLUFyY2hpdmUgLVBhdGggIlJhY2stU0RLLnppcCIgLURlc3RpbmF0aW9uUGF0aCAiLiIKCiAgICAgIC0gbmFtZTogQnVpbGQgcGx1Z2luCiAgICAgICAgcnVuOiB8CiAgICAgICAgICAkZW52OlJBQ0tfRElSID0gIiQoR2V0LUxvY2F0aW9uKVxSYWNrLVNESyIKICAgICAgICAgIE5ldy1JdGVtIC1JdGVtVHlwZSBEaXJlY3RvcnkgLUZvcmNlIC1QYXRoIGJ1aWxkCgogICAgICAgICAgY2wgL3N0ZDpjKysxNyAvTzIgL0VIY2MgL01EIC9EX1VTRV9NQVRIX0RFRklORVMgL0ROT01JTk1BWCAvaSRlbnY6UkFDS19ESVJcaW5jbHVkZSIgL2kkZW52OlJBQ0tfRElSXGRlcFxpbmNsdWRlIiAvYyBzcmNccGx1Z2luLmNwcCAvRm86YnVpbGRccGx1Z2luLm9iagoKICAgICAgICAgIGNsIC9zdGQ6YysrMTcgL08yIC9FSGNjIC9NRAogICAgICAgICAgICAvaSRlbnY6UkFDS19ESVJcaW5jbHVkZSIgL2kkZW52OlJBQ0tfRElSXGRlcFxpbmNsdWRlIgogICAgICAgICAgICAvYyBzcmNcUk5EMTYuY3BwIC9GbzpidWlsZFxSTkQxNi5vYmoKCiAgICAgICAgICBsaW5rIC9ETEwgL09VVFBsdWdpbi5kbGwgYnVpbGRccGx1Z2luLm9iaiBidWlsZFxSTkQxNi5vYmoKICAgICAgICAgICAgL0xJQlBBVEg6IiRlbnY6UkFDS19ESVIiIGxpYlJhY2subGliCgogICAgICAtIG5hbWU6IENyZWF0ZSBhcnRpZmFjdAogICAgICAgIHJ1bjogfAogICAgICAgICAgTmV3LUl0ZW0gLUl0ZW1UeXBlIERpcmVjdG9yeSAtRm9yY2UgLVBhdGggZGlzdFxPTS1STkQxNgogICAgICAgICAgQ29weS1JdGVtIHBsdWdpbi5kbGwgZGlzdFxPTS1STkQxNlwKICAgICAgICAgIENvcHktSXRlbSBwbHVnaW4uanNvbiBkaXN0XE9NLVJORDE2XAogICAgICAgICAgQ29weS1JdGVtIC1SZWN1cnNlIHJlcyBkaXN0XE9NLVJORDE2XAoKICAgICAgLSBuYW1lOiBVcGxvYWQgYXJ0aWZhY3QKICAgICAgICB1c2VzOiBhY3Rpb25zL3VwbG9hZC1hcnRpZmFjdEB2NAogICAgICAgIHdpdGg6CiAgICAgICAgICBuYW1lOiBPTS1STkQxNi13aW4teDY0CiAgICAgICAgICBwYXRoOiBkaXN0L09NLVJORDE2LwoKICByZWxlYXNlOgogICAgbmVlZHM6IGJ1aWxkCiAgICBydW5zLW9uOiB1YnVudHUtbGF0ZXN0CiAgICBpZjogZ2l0aHViLmV2ZW50X25hbWUgPT0gJ3B1c2gnCiAgICBwZXJtaXNzaW9uczoKICAgICAgY29udGVudHM6IHdyaXRlCiAgICBzdGVwzoKICAgICAgLSB1c2VzOiBhY3Rpb25zL2Rvd25sb2FkLWFydGlmYWN0QHY0CiAgICAgICAgd2l0aDoKICAgICAgICAgIG5hbWU6IE9NLVJORDE2LXdpbi14NjQKICAgICAgICAgIHBhdGg6IE9NLVJORDE2LwoKICAgICAgLSBuYW1lOiBDcmVhdGUgcmVsZWFzZSBwYWNrYWdlCiAgICAgICAgcnVuOiB8CiAgICAgICAgICB0YXIgLS16c3RkIC1jZiBPTS1STkQxNi0xLjAuMC13aW4teDY0LnZjdnBsdWdpbiBPTS1STkQxNgoKICAgICAgLSBuYW1lOiBDcmVhdGUgUmVsZWFzZQogICAgICAgIHVzZXM6IHNvZnRwcm9wcy9hY3Rpb24tZ2gtcmVsZWFzZUB2MQogICAgICAgIHdpdGg6CiAgICAgICAgICB0YWdfbmFtZTogdjEuMC4wCiAgICAgICAgICBuYW1lOiBSZWxlYXNlIHYxLjAuMAogICAgICAgICAgZmlsZXM6IE9NLVJORDE2LTEuMC4wLXdpbi14NjQudmN2cGx1Z2luCiAgICAgICAgZW52OgogICAgICAgICAgR0lUSFVCX1RPS0VOOiAke3sgc2VjcmV0cy5HSVRIVUJfVE9LRU4gfX0K
+name: Build VCV Rack Plugin
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    defaults:
+      run:
+        shell: powershell
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup MSVC
+        uses: ilammy/msvc-dev-cmd@v1
+
+      - name: Download Rack SDK
+        run: |
+          Invoke-WebRequest -Uri "https://vcvrack.com/downloads/Rack-SDK-2.6.6-win-x64.zip" -OutFile "Rack-SDK.zip"
+          Expand-Archive -Path "Rack-SDK.zip" -DestinationPath "."
+
+      - name: Build plugin
+        run: |
+          $env:RACK_DIR = "$(Get-Location)\Rack-SDK"
+          New-Item -ItemType Directory -Force -Path build
+          
+          cl /std:c++17 /O2 /EHsc /MD /D_USE_MATH_DEFINES /DNOMINMAX /I"$env:RACK_DIR\include" /I"$env:RACK_DIR\dep\include" /c src\plugin.cpp /Fo:build\plugin.obj
+          
+          cl /std:c++17 /O2 /EHsc /MD /D_USE_MATH_DEFINES /DNOMINMAX /I"$env:RACK_DIR\include" /I"$env:RACK_DIR\dep\include" /c src\RND16.cpp /Fo:build\RND16.obj
+          
+          link /DLL /OUT:plugin.dll build\plugin.obj build\RND16.obj /LIBPATH:"$env:RACK_DIR" libRack.lib
+
+      - name: Create artifact
+        run: |
+          New-Item -ItemType Directory -Force -Path dist\OM-RND16
+          Copy-Item plugin.dll dist\OM-RND16\
+          Copy-Item plugin.json dist\OM-RND16\
+          Copy-Item -Recurse res dist\OM-RND16\
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: OM-RND16-win-x64
+          path: dist/OM-RND16/
+
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push'
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: OM-RND16-win-x64
+          path: OM-RND16/
+
+      - name: Create release package
+        run: tar --zstd -cf OM-RND16-1.0.0-win-x64.vcvplugin OM-RND16
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: v1.0.0
+          name: Release v1.0.0
+          files: OM-RND16-1.0.0-win-x64.vcvplugin
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
