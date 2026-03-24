@@ -10,35 +10,47 @@ jobs:
     runs-on: windows-latest
     defaults:
       run:
-        shell: powershell
+        shell: msys2 {0}
     steps:
       - uses: actions/checkout@v4
 
-      - name: Setup MSVC
-        uses: ilammy/msvc-dev-cmd@v1
+      - name: Setup MSYS2
+        uses: msys2/setup-msys2@v2
+        with:
+          msystem: MINGW64
+          update: true
+          install: mingw-w64-x86_64-gcc mingw-w64-x86_64-make
 
       - name: Download Rack SDK
         run: |
-          Invoke-WebRequest -Uri "https://vcvrack.com/downloads/Rack-SDK-2.6.6-win-x64.zip" -OutFile "Rack-SDK.zip"
-          Expand-Archive -Path "Rack-SDK.zip" -DestinationPath "."
+          curl -L -o Rack-SDK.zip "https://vcvrack.com/downloads/Rack-SDK-2.6.6-win-x64.zip"
+          unzip Rack-SDK.zip
 
       - name: Build plugin
         run: |
-          $env:RACK_DIR = "$(Get-Location)\Rack-SDK"
-          New-Item -ItemType Directory -Force -Path build
+          export RACK_DIR="$(pwd)/Rack-SDK"
+          mkdir -p build
           
-          cl /std:c++17 /O2 /EHsc /MD /D_USE_MATH_DEFINES /DNOMINMAX /I"$env:RACK_DIR\include" /I"$env:RACK_DIR\dep\include" /c src\plugin.cpp /Fo:build\plugin.obj
+          g++ -std=c++11 -O3 -fPIC -march=nehalem \
+            -D_USE_MATH_DEFINES \
+            -I"$RACK_DIR/include" -I"$RACK_DIR/dep/include" \
+            -c src/plugin.cpp -o build/plugin.o
           
-          cl /std:c++17 /O2 /EHsc /MD /D_USE_MATH_DEFINES /DNOMINMAX /I"$env:RACK_DIR\include" /I"$env:RACK_DIR\dep\include" /c src\RND16.cpp /Fo:build\RND16.obj
+          g++ -std=c++11 -O3 -fPIC -march=nehalem \
+            -D_USE_MATH_DEFINES \
+            -I"$RACK_DIR/include" -I"$RACK_DIR/dep/include" \
+            -c src/RND16.cpp -o build/RND16.o
           
-          link /DLL /OUT:plugin.dll build\plugin.obj build\RND16.obj /LIBPATH:"$env:RACK_DIR" libRack.lib
+          g++ -shared -static-libstdc++ -static-libgcc \
+            -o plugin.dll build/plugin.o build/RND16.o \
+            -L"$RACK_DIR" -lRack
 
       - name: Create artifact
         run: |
-          New-Item -ItemType Directory -Force -Path dist\OM-RND16
-          Copy-Item plugin.dll dist\OM-RND16\
-          Copy-Item plugin.json dist\OM-RND16\
-          Copy-Item -Recurse res dist\OM-RND16\
+          mkdir -p dist/OM-RND16
+          cp plugin.dll dist/OM-RND16/
+          cp plugin.json dist/OM-RND16/
+          cp -r res dist/OM-RND16/
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
