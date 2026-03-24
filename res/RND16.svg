@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="15.24mm" height="128.5mm" viewBox="0 0 15.24 128.5">
+  <defs>
+    <linearGradient id="panel-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3a3a3a"/>
+      <stop offset="50%" style="stop-color:#2a2a2a"/>
+      <stop offset="100%" style="stop-color:#1a1a1a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Panel background -->
+  <rect width="15.24" height="128.5" fill="url(#panel-gradient)"/>
+
+  <!-- Top label: RND16 -->
+  <text x="7.62" y="8" font-family="Arial, sans-serif" font-size="3.5" font-weight="bold" fill="#ffffff" text-anchor="middle">RND16</text>
+
+  <!-- Separator line -->
+  <line x1="2" y1="12" x2="13.24" y2="12" stroke="#555555" stroke-width="0.3"/>
+
+  <!-- Column labels -->
+  <text x="4.5" y="122" font-family="Arial, sans-serif" font-size="2" fill="#aaaaaa" text-anchor="middle">IN</text>
+  <text x="10.74" y="122" font-family="Arial, sans-serif" font-size="2" fill="#aaaaaa" text-anchor="middle">OUT</text>
+
+  <!-- Separator line -->
+  <line x1="2" y1="116" x2="13.24" y2="116" stroke="#555555" stroke-width="0.3"/>
+
+  <!-- Author signature -->
+  <text x="7.62" y="126" font-family="Arial, sans-serif" font-size="1.8" fill="#888888" text-anchor="middle">OM-陈辰尘</text>
+</svg>

@@ -1,0 +1,21 @@
+{
+  "slug": "OM-RND16",
+  "name": "OM-RND16",
+  "version": "1.0.0",
+  "license": "GPL-3.0-or-later",
+  "author": "OM-陈辰尘",
+  "authorEmail": "",
+  "authorUrl": "",
+  "pluginUrl": "",
+  "manualUrl": "",
+  "sourceUrl": "",
+  "donateUrl": "",
+  "modules": [
+    {
+      "slug": "RND16",
+      "name": "RND16",
+      "description": "16-channel random voltage generator with push trigger inputs",
+      "tags": ["Random", "Sequencer", "Utility"]
+    }
+  ]
+}
